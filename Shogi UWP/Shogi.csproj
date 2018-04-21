@@ -110,6 +110,7 @@
     <Compile Include="Engine\ShogiEngine.cs" />
     <Compile Include="Handlers\Field.cs" />
     <Compile Include="Handlers\Hint.cs" />
+    <Compile Include="Handlers\Last.cs" />
     <Compile Include="Handlers\Piece.cs" />
     <Compile Include="MainPage.cs" />
     <Compile Include="MainPage.xaml.cs">
