@@ -2,7 +2,7 @@
 
 namespace Shogi.Engine.Places
 {
-    class Board: Place
+    public class Board: Place
     {
         public Field[,] Fields = new Field[9, 9];
         public Field GetField(int row, int column)

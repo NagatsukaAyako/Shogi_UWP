@@ -2,7 +2,7 @@
 
 namespace Shogi.Engine
 {
-    class Game
+    public class Game
     {
         public Player CurrentTurn;
         public Position CurrentPosition;

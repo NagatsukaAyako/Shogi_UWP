@@ -106,10 +106,8 @@
     <Compile Include="Engine\Places\Komadai.cs" />
     <Compile Include="Engine\Places\Place.cs" />
     <Compile Include="Engine\Players\Player.cs" />
-    <Compile Include="Engine\Players\Gote.cs" />
-    <Compile Include="Engine\Players\Sente.cs" />
     <Compile Include="Engine\Position.cs" />
-    <Compile Include="Engine\Shogi.cs" />
+    <Compile Include="Engine\ShogiEngine.cs" />
     <Compile Include="Handlers\Field.cs" />
     <Compile Include="Handlers\Hint.cs" />
     <Compile Include="Handlers\Piece.cs" />

@@ -8,14 +8,14 @@ using Shogi.Engine.Pieces;
 
 namespace Shogi_UWP.Handlers
 {
-    class Piece : Grid
+    public class Piece : Grid
     {
         public Shogi.Engine.Pieces.Piece PieceEngine { get; }
         public Piece(Shogi.Engine.Pieces.Piece piece)
         {
             PieceEngine = piece;
             PointerPressed += delegate (object sender, PointerRoutedEventArgs e) {
-                ClickedPieceHandler = this;
+                MainPage.ClickedPieceHandler = this;
                 ShogiEngine.TrySelectPiece(PieceEngine);
             };
             Background = new SolidColorBrush(Windows.UI.Colors.Transparent);

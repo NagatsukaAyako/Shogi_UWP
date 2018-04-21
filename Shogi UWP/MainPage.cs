@@ -15,7 +15,7 @@ namespace Shogi_UWP
                 for (int j = 0; j < 9; j++)
                 {
                     Handlers.Field field = new Handlers.Field(ShogiEngine.CurrentGame.CurrentPosition.Board.GetField(i, j));
-                    Shogiban.Children.Add(field);
+                    Fields.Children.Add(field);
                     Grid.SetRow(field, i);
                     Grid.SetColumn(field, j);
                 }
@@ -31,7 +31,7 @@ namespace Shogi_UWP
             {
                 Grid.SetRow(piece.Handler as Handlers.Piece, (place as Field).Row);
                 Grid.SetColumn(piece.Handler as Handlers.Piece, (place as Field).Column);
-                Shogiban.Children.Add(piece.Handler as Handlers.Piece);
+                Pieces.Children.Add(piece.Handler as Handlers.Piece);
             }
             else if (place == place.Position.Komadai[Player.Gote])
             {
@@ -46,7 +46,7 @@ namespace Shogi_UWP
         {
             Handlers.Piece Handler = piece.Handler as Handlers.Piece;
             if (place is Field)
-                Shogiban.Children.Remove(Handler);
+                Pieces.Children.Remove(Handler);
             else if (place == place.Position.Komadai[Player.Gote])
                 GoteKomadai.Children.Remove(Handler);
             else SenteKomadai.Children.Remove(Handler);

@@ -10,7 +10,7 @@ namespace Shogi_UWP
     public sealed partial class MainPage : Page
     {
         private Handlers.Piece SelectedPieceHandler;
-        private Handlers.Piece ClickedPieceHandler;
+        public static Handlers.Piece ClickedPieceHandler;
         public MainPage()
         {
             InitializeComponent();
@@ -38,10 +38,10 @@ namespace Shogi_UWP
         }
         public void InitDelegates()
         {
-            ShogiEngine.HideHints += delegate () { /*Hints.Children.Clear(); */};
+            ShogiEngine.HideHints += delegate () { Hints.Children.Clear(); };
             ShogiEngine.ShowHints += delegate () {
                 foreach (Field field in ShogiEngine.CurrentGame.CurrentPosition.Board.AvailableMoves)
-                    Shogiban.Children.Add(new Handlers.Hint(field));
+                    Hints.Children.Add(new Handlers.Hint(field));
             };
             ShogiEngine.SelectPieceEvent += SelectPiece;
             ShogiEngine.UnselectPieceEvent += UnselectPiece;
@@ -49,14 +49,6 @@ namespace Shogi_UWP
             ShogiEngine.CreatePieceEvent += CreatePieceVisual;
             ShogiEngine.AddPieceEvent += AddPiece;
             ShogiEngine.RemovePieceEvent += RemovePiece;
-            ShogiEngine.ThrowPieceEvent += delegate (Piece piece, Place place)
-            {
-                //Pieces.Children.Remove(SelectedPieceHandler);
-                //PieceHandler transformedHandler = new Handlers.Piece(piece);
-                //Grid.SetRow(transformedHandler, (piece.Location as Field).Row);
-                //Grid.SetColumn(transformedHandler, (piece.Location as Field).Column);
-                //Pieces.Children.Add(transformedHandler);
-            };
         }     
     }
 }

@@ -2,12 +2,7 @@
 
 namespace Shogi.Engine.Players
 {
-    abstract class PlayerClass
-    {
-        public Komadai Komadai;
-        public PlayerClass(Komadai komadai) => Komadai = komadai;
-    }
-    enum Player
+    public enum Player
     {
         Sente,
         Gote

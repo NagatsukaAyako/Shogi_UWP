@@ -1,7 +1,7 @@
 ﻿using Shogi.Engine.Pieces;
 namespace Shogi.Engine.Places
 {
-    class Field : Place
+    public class Field : Place
     {
         public readonly byte Row;
         public readonly byte Column;

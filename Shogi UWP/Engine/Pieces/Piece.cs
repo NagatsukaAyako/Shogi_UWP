@@ -4,7 +4,7 @@ using Shogi.Engine.Players;
 
 namespace Shogi.Engine.Pieces
 {
-    abstract class Piece
+    public abstract class Piece
     {
         public object Handler;
         public abstract string Label { get; }

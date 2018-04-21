@@ -4,7 +4,7 @@ using Shogi.Engine.Players;
 using Shogi.Engine.Pieces;
 namespace Shogi.Engine
 {
-    class Position
+    public class Position
     {
         public Game Game;
         public Board Board;
